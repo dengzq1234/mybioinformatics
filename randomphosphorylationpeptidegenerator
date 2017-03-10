@@ -1,0 +1,26 @@
+#length: length of sequence required
+#size: amount of sequence
+#phosphosite: here we use "T" as example)
+
+import random
+def AA_generator(length,size,phosphosite ='T'):
+    bg = open("bgdata101.txt", "wb")
+    for j in range(size):
+        aa = 'ACDEFGHIKLMNPQRSTVWY'   #amino acid library
+        stra = ''                 
+        i = length/2                                       
+        while i > 0:
+            stra += random.choice(aa) #generate first half sequence before phosphosite 
+            i -= 1 
+    
+        strb =''
+        i2 = length/2
+        while i2 > 0:
+            strb += random.choice(aa)  #generate second half sequence before phosphosite 
+            i2 -= 1
+        sequence = stra + phosphosite + strb  # put three part together   
+        bg.write(sequence)
+        bg.write('\r\n')
+        print stra + phosphosite + strb
+        
+        
