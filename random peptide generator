@@ -1,6 +1,6 @@
 #length: length of sequence required
 #size: amount of sequence
-#phosphosite: here we use "T" as example)
+#phosphosite: here we use "T" as example, but also "S" or "Y", depends on you)
 
 import random
 def AA_generator(length,size,phosphosite ='T'):
