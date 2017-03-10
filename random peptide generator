@@ -16,7 +16,7 @@ def AA_generator(length,size,phosphosite ='T'):
         strb =''
         i2 = length/2
         while i2 > 0:
-            strb += random.choice(aa)  #generate second half sequence before phosphosite 
+            strb += random.choice(aa)  #generate second half sequence after phosphosite 
             i2 -= 1
         sequence = stra + phosphosite + strb  # put three part together   
         bg.write(sequence)
